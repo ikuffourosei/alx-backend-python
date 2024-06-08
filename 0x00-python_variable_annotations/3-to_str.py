@@ -3,4 +3,5 @@
 
 
 def to_str(n: float) -> str:
-    return str(n)
+    '''Returns the float of a string'''
+    return n.__str__()
