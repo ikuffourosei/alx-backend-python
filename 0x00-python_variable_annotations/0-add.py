@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 '''A Function that adds two floats and returns a float'''
 
 
