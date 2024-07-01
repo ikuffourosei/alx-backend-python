@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
-from utils import access_nested_map
+from utils import get_json
 
-
-nested_map = {"a": {"b": 2}}
-
-path = ('a','b', 'c')
-nest = access_nested_map(nested_map, path)
-print(nest)
+test_url="https://jsonplaceholder.typicode.com/todos?userId=2"
+get = get_json(test_url)
+print(get)
