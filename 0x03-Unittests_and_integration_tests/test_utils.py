@@ -18,7 +18,7 @@ class TestAccessNestedMap(unittest.TestCase):
     def test_access_nested_map(self, nested_map: Mapping,
                                path: Sequence, outcome):
         self.assertEqual(access_nested_map(nested_map, path), outcome)
-    
+
     @parameterized.expand([
         ({}, ("a",)),
         ({"a": 1}, ("a", "b"))
@@ -27,7 +27,6 @@ class TestAccessNestedMap(unittest.TestCase):
                                          path: Sequence):
         with self.assertRaises(KeyError):
             access_nested_map(nested_map, path)
-
 
     class TestGetJson(unittest.TestCase):
         """Tests the get_json method from utils.py"""
@@ -44,6 +43,7 @@ class TestAccessNestedMap(unittest.TestCase):
                 results = get_json(test_url)
                 mock_request_get.assert_called_once_with(test_url)
                 self.assertEqual(results, test_payload)
+
 
 if __name__ == '__main__':
     unittest.main()
