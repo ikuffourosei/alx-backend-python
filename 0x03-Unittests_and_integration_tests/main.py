@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
-from utils import memoize
+from client import GithubOrgClient
 
 
+git = GithubOrgClient('google')
+print(git.org)
